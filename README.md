@@ -4,7 +4,7 @@
 ## Team members
 * Daryne Bouadi
 * Tom Grubb
-* Petter Lovehagennnnnnnnnnnnnnnnnnnnn
+* Petter Lovehagennnnnnnnnnnnnnnnnnnn
 * Yacine Ramdani
 * Deniz Turan
 
