@@ -4,12 +4,18 @@
 ## Team members
 * Daryne Bouadi
 * Tom Grubb
-* Petter Lovehagen
+* Petter Lovehagennnnnnnnnnnnnnnnnnnnn
 * Yacine Ramdani
 * Deniz Turan
 
 
 ## Team charter
 
+TODO Add link to charter
+
 ## Project Description
+
+TODO Add content
+
+
 
