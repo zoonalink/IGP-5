@@ -3,8 +3,11 @@
 ## Article details
 
 **Title:** The Role of Actigraphy in the Study of Sleep and Circadian Rhythms
+
 **Authors:** Sonia Ancoli-Israel, Roger Cole, Cathy Alessi, Mark Chambers, William Moorcroft, Charles P. Pollak
+
 **Citation:** (Ancoli-Israel et al., 2003)
+
 **Bibliography:** Ancoli-Israel, S., Cole, R., Alessi, C., Chambers, M., Moorcroft, W. and Pollak, C.P. (2003) The Role of Actigraphy in the Study of Sleep and Circadian Rhythms. 26 (3).
 
 "Actigraphs today have movement detectors (e.g., accelerometers) and sufficient memory to record for up to several weeks. Movement is sampled several times per second and stored for later analysis. Computer programs are used to derive levels of activity/inactivity, rhythm parameters (such as amplitude or acrophase) and sleep/wake parameters (such as total sleep time, percent of time spent asleep, total wake time, percent of time spent awake and number of awakenings)."
