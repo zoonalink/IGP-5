@@ -15,7 +15,7 @@
 ### Summary
 
 * Negative association between physical activity and depression well established but not the *precise characteristics* of physical activity patterns
-* Complexity measures may identify unexplored aspects of activity patterns - e.g. extent to which there are reptitite periods of physical activity, diversity in durations, etc.
+* Complexity measures may identify unexplored aspects of activity patterns - e.g. extent to which there are reptitive periods of physical activity, diversity in durations, etc.
 * Actigraphy data: 
   * 4 weeks (~40000 data points each individual)
   * n = 46 (25 non-depressed, 21 depressed)
@@ -46,12 +46,12 @@
   * Depression score on Beck Depression Inventory (BDI)-II questionnaire
 
 * **Data preprocessing**:
-  * reduced oerall size by resampling - averaging 10 minute bines
+  * reduced overall size by resampling - averaging 10 minute bins
   * rank transformation to get uniform amplitude distribution
     * ensures activity count time series not affected by extreme events
     * comparable amplitudes
 
-* **Recurrence quantificaion analysis (RQA)**
+* **Recurrence quantification analysis (RQA)**
 
 ![](/literature/_images/2023-12-23-11-02-06.png)
 
