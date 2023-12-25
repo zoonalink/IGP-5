@@ -44,7 +44,7 @@
 
 1. novel, open dataset with sensor data of patients (control, depression)
 2. large amount of data from both depressed and non-depressed
-3. baseline evaluatoin with ML algorithms for classifying depressed v nondepresse days
+3. baseline evaluation with ML algorithms for classifying depressed v nondepresse days
 
 ### Data
 
