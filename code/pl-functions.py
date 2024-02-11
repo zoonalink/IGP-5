@@ -80,33 +80,6 @@ def extract_folder(folderpath, add_scores=False, downsample=None):
     return df
 
 
-def extract_full_days(df):
-    """
-    Extracts the records from the dataframe equal to full days,
-    (where each day has exactly 1440 records).
-
-    Parameters:
-    df (pandas.DataFrame): The input dataframe containing timestamp and id columns.
-
-    Returns:
-    pandas.DataFrame: The subset of the input dataframe that contains only the records
-    corresponding to full days.
-    """
-    # Convert timestamp to date
-    df['date'] = df['timestamp'].dt.date
-
-    # Count the number of records per day
-    counts = df.groupby(['id', 'date']).size()
-
-    # Get the dates that have 1440 records
-    full_days = counts[counts == 1440].reset_index()['date']
-
-    # Extract only the records for these dates
-    df_full_days = df[df['date'].isin(full_days)]
-
-    return df_full_days
-
-
 
 def resample_data(df, freq, agg_func='mean'):
     """
@@ -125,32 +98,44 @@ def resample_data(df, freq, agg_func='mean'):
     return df_resampled
 
 
-def extract_full_days(df):
+def extract_full_days(df, min_days):
     """
     Extracts the records from the input DataFrame that correspond to full days, 
-    where each day has exactly 1440 records.
+    where each day has exactly 1440 records, and each subject has at least 'min_days' 
+    full days of data.
 
     Parameters:
     df (DataFrame): The input DataFrame containing timestamp and id columns.
+    min_days (int): The minimum number of full days required for each subject.
 
     Returns:
     DataFrame: The subset of the input DataFrame that contains only the records 
-    corresponding to full days.
+    corresponding to full days for subjects that have at least 'min_days' full days of data.
     """
    
-    # Convert timestamp to date
+    #  timestamp to date
     df['date'] = df['timestamp'].dt.date
 
     # Count the number of records per day
     counts = df.groupby(['id', 'date']).size()
 
     # Get the dates that have 1440 records
-    full_days = counts[counts == 1440].reset_index()['date']
+    full_days = counts[counts == 1440].reset_index()
+
+    #  number of full days for each subject
+    full_days_counts = full_days['id'].value_counts()
+
+    # Get the subjects that have at least 'min_days' full days
+    valid_subjects = full_days_counts[full_days_counts >= min_days].index
+
+    # Filter the full days data 
+    df_full_days = full_days[full_days['id'].isin(valid_subjects)]
 
     # Extract only the records for these dates
-    df_full_days = df[df['date'].isin(full_days)]
+    df_full_days = df[df['date'].isin(df_full_days['date'])]
 
     return df_full_days
+
 
 
 
