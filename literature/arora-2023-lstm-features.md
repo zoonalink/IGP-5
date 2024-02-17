@@ -10,7 +10,6 @@
 
 **Bibliography:** Arora, A., Chakraborty, P. and Bhatia, M.P.S. (2023) Identifying digital biomarkers in actigraph based sequential motor activity data for assessment of depression: a model evaluating SVM in LSTM extracted feature space. International Journal of Information Technology [online]. 15 (2), pp. 797–802. Available from: https://doi.org/10.1007/s41870-023-01162-5 [Accessed 17 February 2024].
 
-
 ## Notes
 
 ### Abstract
@@ -20,7 +19,6 @@
 "Early detection of behavioral symptomatology of mental illness can be done by observing patterns in people’s daily activities."
 
 "Wearable activity trackers collect fine-grained sensor data characterizing the behavior and physiology of users providing objective measures of physical activity. Digital biomarkers derived from these sensor recordings can aid in the improved monitoring and detection of episodes associated with mental health disorders. These digital biomarkers could be used for timely, unobtrusive, and scalable screening of mental health. The Actigraph sensor, for example, is a widely used wearable sensor for assessing a person’s physical activity and sleep [9]. It is a non-invasive way to track people’s rest/activity cycles. Individuals can eventually be screened for depression using this actigraphic pattern analysis."
-
 
 **deep learning - extract HL features + hand-crafted statistical features**
 
@@ -73,7 +71,6 @@
 
 ![](./images/2024-02-17-22-01-38.png)
 
-
 ## conclusion
 
 * combine LSTM and SVM
@@ -84,4 +81,3 @@
 
 * more complex deep learning architecture - bidirectional LSTM, attention model
 * apply to severity levels
-
