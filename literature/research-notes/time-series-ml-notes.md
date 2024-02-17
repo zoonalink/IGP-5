@@ -58,3 +58,12 @@ https://www.tensorflow.org/tutorials/structured_data/time_series
     * single setp (baseline, linear, dense, cnn, rnn, etc.)
     * multi-step (baseline, single-shot, autoregressive)
 
+
+
+## TODO
+
+add articles to zotero
+summarise notes for most recent articles from perspective of next steps
+read the dissertation
+run the lstm model
+notes onto teams

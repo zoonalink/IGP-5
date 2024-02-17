@@ -98,6 +98,9 @@ def resample_data(df, freq, agg_func='mean'):
     return df_resampled
 
 
+### this does not work as I thought...it is not keeping only full days.
+
+
 def extract_full_days(df, min_days):
     """
     Extracts the records from the input DataFrame that correspond to full days, 
