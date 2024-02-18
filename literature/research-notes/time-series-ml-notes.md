@@ -78,6 +78,7 @@ https://www.tensorflow.org/tutorials/structured_data/time_series
 **predicting severity**
 **looking at `segment lengths`** - see Frogner
 **apply SMOTE to CNN model** - see Frogner
+
 "When using Synthetic Minority Over-sampling Technique (SMOTE) as a technique for generating more data, they increased their random forest F1-score to 0.73. An extension of this work could be to attempt to use the same sampling strategies as Garcia-Ceja et al. did on the data passed into our CNN."
 
 
