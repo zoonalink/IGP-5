@@ -59,10 +59,50 @@ https://www.tensorflow.org/tutorials/structured_data/time_series
     * multi-step (baseline, single-shot, autoregressive)
 
 
+### directions
+
+* Arora 2023
+  * LSTM high level features + statistical features
+  * overlapping sliding window
+  * SVM
+  * 95.57% accuracy
+* Jakobsen 2020
+  * Random Forest, Deep NN, CNN
+  * statistical features = mean, std, prop 0 activity
+* Frogner 2019
+  * CNN, 1D 
+  * F1 - 0.70, MSE - 4.0
+
+**more advanced CNN to improve on Frogner**
+**more advanced RNN to improve on Arora**
+**predicting severity**
+**looking at `segment lengths`** - see Frogner
+**apply SMOTE to CNN model** - see Frogner
+"When using Synthetic Minority Over-sampling Technique (SMOTE) as a technique for generating more data, they increased their random forest F1-score to 0.73. An extension of this work could be to attempt to use the same sampling strategies as Garcia-Ceja et al. did on the data passed into our CNN."
+
+
+### features
+
+* mean
+* median
+* std
+* variance
+* kurtosis
+* coefficient of variance
+* interquartile range
+* min
+* max
+* trimmed mean
+* spectral density
+* entropy
+* skewness
+* spectral flatness
+
+* 
 
 ## TODO
 
-add articles to zotero
+~~add articles to zotero~~
 summarise notes for most recent articles from perspective of next steps
 read the dissertation
 run the lstm model
