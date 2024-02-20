@@ -2,9 +2,9 @@
 ## Article details
 **Title:** An Ensemble Classification Model for Depression Based on Wearable Device Sleep Data
 
-**Authors:** Yuzhu Hu, Jian Chen, Junxin Chen, Wei Wang, Shen Zhao*, and Xiping Hu
+**Authors:** Yuzhu Hu, Jian Chen, Junxin Chen, Wei Wang, Shen Zhao, and Xiping Hu
 
-**Citation:** (Yuzhu et al., 2017)
+**Citation:** (Hu et al., 2017)
 
 **Bibliography:** Yuzhu Hu, Jian Chen, Junxin Chen, Wei Wang, Shen Zhao, and Xiping Hu (2017) An Ensemble Classification Model for Depression Based on Wearable Device Sleep Data - PubMed [online]. Available from: https://pubmed.ncbi.nlm.nih.gov/37030745/ [Accessed 8 December 2023].
 
