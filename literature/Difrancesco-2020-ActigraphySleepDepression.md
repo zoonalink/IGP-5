@@ -30,7 +30,7 @@ Studies have shown depressive disorders are associated with lower daily activity
 
 * night-time activity level appears to be higher in patients with dpression but not always shown in actigraphy data
 * previous studies show both insomnia and hypersomnia are associated with depression but author's previous results show:
-* "...our previous results with actigraphy have found that higher severity of depressive symptom is associated with longer (but not shorter) SD (Difrancesco et al., 2019). Depression is however heterogeneous in its presentation and these results may not be generalizable to all patients."
+* "...our previous results with actigraphy have found that higher severity of depressive symptom is associated with longer (but not shorter) SD (Difrancesco et al., 2019). Depression is however heterogeneous in its presentation and these results may not be generalisable to all patients."
 * Depression is challenging with opposite clinical presentations - some researchers move away from traditional methods of diagnosis (e.g. DSM-5) and favour  'symptom dimensions' using techniques like factor analysis
   * FA (factor analysis) to identify underlying dimensions, factor structures
   * Three major symptom dimensions -> 1. mood/cognition 2. somatic 3. sleep symptom

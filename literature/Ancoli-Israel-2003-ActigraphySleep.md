@@ -58,8 +58,8 @@ Used exensively for sleep:
 
 ![](/literature/_images/2023-12-21-15-36-04.png)
 
-"To extract this information, the raw activity values are analyzed directly. The most popular method has been cosinor analysis, in which a cosine curve with a period at or near 24 hours is fit to the data by the least-squares method. The parameters that are of interest are acrophase (time of peak activity), amplitude (peak-to-nadir difference) and mesor (mean) of the fitted curve (see Fig 2). A “five-parameter extended cosinor analysis” has also been used to provide a better fit to activity data, which typically deviate from the shape of a cosine curve.109,110 The five model parameters are circadian minimum, amplitude, acrophase, alpha (width of the rhythm) and beta (steepness of fitted curve, which can approximate a square wave if beta is high)."
+"To extract this information, the raw activity values are analysed directly. The most popular method has been cosinor analysis, in which a cosine curve with a period at or near 24 hours is fit to the data by the least-squares method. The parameters that are of interest are acrophase (time of peak activity), amplitude (peak-to-nadir difference) and mesor (mean) of the fitted curve (see Fig 2). A “five-parameter extended cosinor analysis” has also been used to provide a better fit to activity data, which typically deviate from the shape of a cosine curve.109,110 The five model parameters are circadian minimum, amplitude, acrophase, alpha (width of the rhythm) and beta (steepness of fitted curve, which can approximate a square wave if beta is high)."
 
 **actigraphy and circadian rhythms in psychiatry**
 
-"These studies, taken together, provide preliminary evidence that actigraphy may prove useful for characterizing and monitoring the circadian rhythm disturbances that often accompany psychiatric disorders."
+"These studies, taken together, provide preliminary evidence that actigraphy may prove useful for characterising and monitoring the circadian rhythm disturbances that often accompany psychiatric disorders."

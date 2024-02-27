@@ -24,14 +24,14 @@
 
 **- Time-related variables**
 - Days of admission (DoA): The number of days a patient had been admitted to the ward.
-- Progress Towards Discharge (PTD): A normalized variable indicating the proportion of the total length of stay completed by a patient at any given time.
+- Progress Towards Discharge (PTD): A normalised variable indicating the proportion of the total length of stay completed by a patient at any given time.
 - Error of Prediction of Hospital Discharge: The difference (in days) between the real discharge date and the estimated discharge date based on activity data.
 
 **Statistical and Mathematical Analyses**
 
 **- Hierarchical Generalised Linear Model (HGLM):** Used to examine the increase in activity levels over the admission period. The model correlated 'Activity Time' with 'PTD'.
 
-**- Hierarchical Gaussian Process (HGP) Model:** Employed to predict hospital discharge dates based on early activity data. 'Activity Time', 'Rest Time', and 'DoA' were input variables predicting 'PTD'. The HGP model utilized hierarchical levels to model data distribution probability, allowing individualised regressions fitted to each patient. The model incorporated a recursive algorithm for predicting clinical course and estimating discharge dates.
+**- Hierarchical Gaussian Process (HGP) Model:** Employed to predict hospital discharge dates based on early activity data. 'Activity Time', 'Rest Time', and 'DoA' were input variables predicting 'PTD'. The HGP model utilised hierarchical levels to model data distribution probability, allowing individualised regressions fitted to each patient. The model incorporated a recursive algorithm for predicting clinical course and estimating discharge dates.
 - Leave-one-out validation: A robust validation method was employed, considering similarities between patients' activity patterns to predict outcomes.
 - Comparison with other models: Preliminary analyses favoured the HGP approach due to its ability to handle between-patient variations and accurately measure uncertainty.
 
@@ -41,16 +41,16 @@
 
 - A total of 23 subjects diagnosed with depressive disorders participated in the study.
 - The sample comprised Caucasian individuals admitted to the acute psychiatric ward at Hospital Rey Juan Carlos.
-- Demographic and clinical characteristics were analyzed using SPSS.
+- Demographic and clinical characteristics were analysed using SPSS.
 
 **Actigraphy Data**
 
-- Activity-related variables, namely 'Activity Time' and 'Rest Time', were summarized at four clinically meaningful times over the admission based on Progress Towards Discharge (PTD) values.
+- Activity-related variables, namely 'Activity Time' and 'Rest Time', were summarised at four clinically meaningful times over the admission based on Progress Towards Discharge (PTD) values.
 - Overall, motor activity levels increased over the admission, as depicted in Figure 2.
 
-**Hierarchical Generalized Linear Model (HGLM)**
+**Hierarchical Generalised Linear Model (HGLM)**
 
-- The mean distribution of the linear function mapping PTD against normalized 'Activity Time' indicated a positive slope, suggesting an increase in overall physical activity levels during the admission.
+- The mean distribution of the linear function mapping PTD against normalised 'Activity Time' indicated a positive slope, suggesting an increase in overall physical activity levels during the admission.
 
 **Hierarchical Gaussian Process (HGP) Regression**
 
@@ -91,7 +91,7 @@
 
 ### Future Research:
 
-- Evidence-based clinical guidelines for the use of actigraphy in depression monitoring are needed to standardize its application in clinical practice.
+- Evidence-based clinical guidelines for the use of actigraphy in depression monitoring are needed to standardise its application in clinical practise.
 - Follow-up studies correlating actigraphy data with relevant clinical outcomes, such as treatment response and suicidal behaviour, are necessary to further understand its utility.
 - Further research is needed to investigate compliance with actigraphs, potentially exploring alternative methods such as mobile phone-based ecological momentary assessment.
 - Exploring additional mathematical methods to understand the relationship between daytime activity, sleep records, and clinical outcomes may provide further insights into depression monitoring and management.
