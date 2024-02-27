@@ -1,5 +1,7 @@
 # Wiki sections
 
+
+
 ## Data
 
 ### Dataset
@@ -10,15 +12,13 @@
 * 
 
 
-### Depression, Actigraphy
+### Depression, Actigraphy, Literature review
 
 * Bowden, C.L. (2005) A different depression: clinical distinctions between bipolar and unipolar depression. Journal of Affective Disorders.
 * Montgomery, A. (no date) A New Depression Scale Designed to be Sensitive to Change.
 * Christina Sobin and Sackeim, H.A. (1997) Psychomotor symptoms of depression. American Journal of Psychiatry [online]. 154 (1), pp. 4–17. Available from: http://psychiatryonline.org/doi/abs/10.1176/ajp.154.1.4 [Accessed 30 November 2023].
 * Opoku Asare, K., Moshe, I., Terhorst, Y., Vega, J., Hosio, S., Baumeister, H., Pulkki-Råback, L. and Ferreira, D. (2022) Mood ratings and digital biomarkers from smartphone and wearable data differentiates and predicts depression status: A longitudinal data analysis. Pervasive and Mobile Computing [online]. 83, p. 101621. Available from: https://www.sciencedirect.com/science/article/pii/S1574119222000566 [Accessed 8 December 2023].
-
-
-### Actigraphy
+* Zakariah, M. and Alotaibi, Y.A. (2023) Unipolar and Bipolar Depression Detection and Classification Based on Actigraphic Registration of Motor Activity Using Machine Learning and Uniform Manifold Approximation and Projection Methods. Diagnostics [online]. 13 (14), p. 2323. Available from: https://www.mdpi.com/2075-4418/13/14/2323 [Accessed 5 February 2024].
 
 * Difrancesco, S., Penninx, B.W.J.H., Riese, H., Giltay, E.J. and Lamers, F. (2022) The role of depressive symptoms and symptom dimensions in actigraphy-assessed sleep, circadian rhythm, and physical activity. Psychological Medicine [online]. 52 (13), pp. 2760–2766.
 
