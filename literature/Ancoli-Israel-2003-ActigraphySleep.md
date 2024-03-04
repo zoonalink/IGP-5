@@ -24,7 +24,7 @@ Used exensively for sleep:
 
 ## Activity count derivation methods and problems:
 
-![count-derivation-methods](/literature/_images/2023-12-21-15-18-07.png)
+![count-derivation-methods](./_images/2023-12-21-15-18-07.png)
 
 **time above threshold**
 
@@ -56,7 +56,7 @@ Used exensively for sleep:
 
 **calculating circadian rhythms**
 
-![](/literature/_images/2023-12-21-15-36-04.png)
+![](./_images/2023-12-21-15-36-04.png)
 
 "To extract this information, the raw activity values are analysed directly. The most popular method has been cosinor analysis, in which a cosine curve with a period at or near 24 hours is fit to the data by the least-squares method. The parameters that are of interest are acrophase (time of peak activity), amplitude (peak-to-nadir difference) and mesor (mean) of the fitted curve (see Fig 2). A “five-parameter extended cosinor analysis” has also been used to provide a better fit to activity data, which typically deviate from the shape of a cosine curve.109,110 The five model parameters are circadian minimum, amplitude, acrophase, alpha (width of the rhythm) and beta (steepness of fitted curve, which can approximate a square wave if beta is high)."
 
