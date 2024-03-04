@@ -14,7 +14,7 @@
 
 ### Abstract
 
-"To monitor depression (unipolar and bipolar patients), traditional methods rely on reports from patients; nevertheless, bias is commonly present in them. To overcome this problem, Ecological Momentary Assessment (EMA) reports have been widely used, which include data of the behavior, feelings and other types of activities recorded almost in real time through the use of portable devices and smartphones containing motion sensors."
+"To monitor depression (unipolar and bipolar patients), traditional methods rely on reports from patients; nevertheless, bias is commonly present in them. To overcome this problem, Ecological Momentary Assessment (EMA) reports have been widely used, which include data of the behaviour, feelings and other types of activities recorded almost in real time through the use of portable devices and smartphones containing motion sensors."
 
 "In this work a methodology was proposed to detect depressive subjects from control subjects based in the data of their motor activity, recorded by a wearable device, obtained from the “Depresjon” database. From the motor activity signals, the extraction of statistical features was carried out to subsequently feed a random forest classifier."
 
@@ -23,15 +23,15 @@ Specificity: 0.919 (91.9% correct classification of those who are not depressed)
 
 ### Introduction
 
-"The World Health Organization (WHO) defines that “health is a state of complete physical, mental and social well-being and not only of disease or infirmity”. More than 350 million people in the world suffer from depression and this can become a serious health problem, especially when it is of long duration and moderate to severe intensity, and can cause great suffering, disrupting work, school, family, economic and emotional activities, etc. In the worst case, it can lead to suicide, which is the cause of approximately 1 million deaths annually."
+"The World Health Organisation (WHO) defines that “health is a state of complete physical, mental and social well-being and not only of disease or infirmity”. More than 350 million people in the world suffer from depression and this can become a serious health problem, especially when it is of long duration and moderate to severe intensity, and can cause great suffering, disrupting work, school, family, economic and emotional activities, etc. In the worst case, it can lead to suicide, which is the cause of approximately 1 million deaths annually."
 
-"that require interventions of health services, but this number is underestimated due to the tendency of adolescents to hide and disguise their own problems to adults and their lack of confidence to access therapeutic structures [2]. Depression is a mental disorder characterized fundamentally by depressive mood, loss of interest and enjoyment of the positive aspects of life and fatigue, which impoverish the quality of life and generate difficulties in the family, work and social environment of those who suffer it"
+"that require interventions of health services, but this number is underestimated due to the tendency of adolescents to hide and disguise their own problems to adults and their lack of confidence to access therapeutic structures [2]. Depression is a mental disorder characterised fundamentally by depressive mood, loss of interest and enjoyment of the positive aspects of life and fatigue, which impoverish the quality of life and generate difficulties in the family, work and social environment of those who suffer it"
 
 "Traditional methods to monitor depression from unipolar and bipolar patient rely on reports from patients. However, in this type of monitoring, bias is commonly present."
 
 "With the increasing of wearable devices (e.g., monitoring bands, smartwatches, etc.) and smartphones that include motion sensors, such as gyroscopes and accelerometers, EMA measurements can be done almost in real time, helping to monitor mental illness as well as given treatments and interventions, and increase the coverage of mental health services in the population without the need of new specific proposal devices."
 
-"In addition to physical sensors, other approaches include data from social media, which include social networks (for instance, Twitter), online forums and public surveys. These approaches try to identify depressed states through the monitoring of these passive information of the activity of the subject. However, all these approaches need direct interaction of the patient, which can lead to errors in the final diagnosis. Thus, a method that minimizes the need of subject interaction to avoid “outliers”, who intentionally overfeed data, is required."
+"In addition to physical sensors, other approaches include data from social media, which include social networks (for instance, Twitter), online forums and public surveys. These approaches try to identify depressed states through the monitoring of these passive information of the activity of the subject. However, all these approaches need direct interaction of the patient, which can lead to errors in the final diagnosis. Thus, a method that minimises the need of subject interaction to avoid “outliers”, who intentionally overfeed data, is required."
 
 ### Materials and methods
 
@@ -60,7 +60,7 @@ Specificity: 0.919 (91.9% correct classification of those who are not depressed)
 
 *normalisation*
 
-"Then, the normalization was calculated with Equation (1), where zi represents the current value normalized, xi represents the original value, μ represents the mean of the column where the value is located and σ represents the standard deviation. This step was performed to avoid overfitting problems."
+"Then, the normalisation was calculated with Equation (1), where zi represents the current value normalised, xi represents the original value, μ represents the mean of the column where the value is located and σ represents the standard deviation. This step was performed to avoid overfitting problems."
 
 $z_i = \frac{x_i − μ }{σ}$
 
@@ -77,7 +77,7 @@ $z_i = \frac{x_i − μ }{σ}$
   * skewness
   * quantailes (1, 5, 25, 75, 95, 99)
 
-"These statistical features were chosen because they are the first, second, third and fourth moments of an aleatory variable, which represent the descriptive measures that may be used for the characterization of the probability distribution of that variable. In other words, they describe the characteristics of the time courses of the activity measured"
+"These statistical features were chosen because they are the first, second, third and fourth moments of an aleatory variable, which represent the descriptive measures that may be used for the characterisation of the probability distribution of that variable. In other words, they describe the characteristics of the time courses of the activity measured"
 
 **Classification Analysis**
 
@@ -116,7 +116,7 @@ $z_i = \frac{x_i − μ }{σ}$
 
 ![confusion matrix](./_images/2024-02-04-12-34-26.png)
 
-"These values represent statistically significant results, since a low percentage of subjects was misclassified in the learning process of RF, which implies that the information contained in the extracted features is presenting values that allow distinguishing between the two possible classes of the subjects. This discussion is supported with the OOB error, validating through a test the performance of the learned model."
+"These values represent statistically significant results, since a low percentage of subjects was misclassified in the learning process of RF, which implies that the information contained in the extracted features is presenting values that allow distinguishing between the two possible classes of the subjects. This discussion is supported with the OOB error, validating through a test the performance of the learnt model."
 
 ![ROC curve](./_images/2024-02-04-12-35-24.png)
 
@@ -130,7 +130,7 @@ $z_i = \frac{x_i − μ }{σ}$
 
 "Among the **symptoms presented by patients with depression are the slowness of movement, poor body gesticulation and the feeling of fatigue, thus they tend to show lower levels of activity** than subjects who do not have this condition, giving meaning to the results obtained."
 
-"Therefore, the **main benefit presented in this study is a preliminary tool** (bearing in mind that it is necessary to study in greater depth this approach, taking into account the regulations of the health system and characterizing the results) that may support the diagnose of specialists to know if a patient presents depression based on the level of activity he has in a full day through the automatic diagnosis of subjects obtained by submitting this information to the model developed in this work, relating the total motor activity with the presence or absence of depression, which is shown, according to the results presented, to have a significantly high accuracy, allowing to reduce false positives and false negatives in the detection of this condition, thus improving the diagnosis of this disease.."
+"Therefore, the **main benefit presented in this study is a preliminary tool** (bearing in mind that it is necessary to study in greater depth this approach, taking into account the regulations of the health system and characterising the results) that may support the diagnose of specialists to know if a patient presents depression based on the level of activity he has in a full day through the automatic diagnosis of subjects obtained by submitting this information to the model developed in this work, relating the total motor activity with the presence or absence of depression, which is shown, according to the results presented, to have a significantly high accuracy, allowing to reduce false positives and false negatives in the detection of this condition, thus improving the diagnosis of this disease.."
 
 "Finally, it is important to mention that the **main limitation of this study is the large volume of data on the motor activity required** by each patient, which makes the analysis of the data a bit complex and delayed, causing a small number of subjects to be used. On the other hand, a **limiting factor that could broaden the focus of this work would be to know information about patients in relation to any psychiatric or other treatment** (e.g., sleeping pills) that they are currently undergoing, allowing us to know if this influences the amount of activity performed by the subjects, which could affect the controls by reducing their physical activity, causing false positives."
 

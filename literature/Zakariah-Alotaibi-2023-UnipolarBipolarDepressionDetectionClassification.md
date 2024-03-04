@@ -46,13 +46,13 @@ The data undergo various preprocessing steps to ensure quality and compatibility
 It involves creating feature vectors from statistical data extracted from each participant's daily activity records. The dataset is divided into four arrays representing different classes: healthy, bipolar I, bipolar II, and unipolar depression.
 
 **Dimensionality Reduction with UMAP:**
-Unsupervised machine learning dimensionality reduction using UMAP (Uniform Manifold Approximation and Projection) is applied to improve performance and visualize high-dimensional data in a lower-dimensional space.
+Unsupervised machine learning dimensionality reduction using UMAP (Uniform Manifold Approximation and Projection) is applied to improve performance and visualise high-dimensional data in a lower-dimensional space.
 
 **Model Training:**
 The data, after dimensionality reduction, are split into training, testing, and validation sets. The neural network model is trained using the Adam optimiser and cross-entropy loss function. Performance metrics such as accuracy score, F1-score, and Cohen Kappa are used to evaluate the model.
 
 **Hyperparameter Tuning:**
-Hyperparameters of the model are optimised using grid search, random search, and Bayesian optimisation techniques. This iterative process aims to find the best combination of hyperparameters that maximise the model's performance and generalizability.
+Hyperparameters of the model are optimised using grid search, random search, and Bayesian optimisation techniques. This iterative process aims to find the best combination of hyperparameters that maximise the model's performance and generalisability.
 
 **Workflow Diagram and Visualisation:**
 The workflow diagram outlines the implementation process, including data processing, feature extraction, and model training. Visualisation techniques such as plotting the age distribution of participants and activity samples aid in understanding the dataset characteristics.
@@ -61,7 +61,7 @@ The workflow diagram outlines the implementation process, including data process
 **Experiment 1:**
 
 Using unprocessed data, the model achieved moderate performance metrics due to class imbalance issues.
-The training score surpassed 0.8 in accuracy and F1-score, but the validation score remained around 0.6, indicating poor generalization.
+The training score surpassed 0.8 in accuracy and F1-score, but the validation score remained around 0.6, indicating poor generalisation.
 The Cohen Kappa validation score was less than 0.1 due to class imbalance, indicating low agreement beyond what would be expected by chance.
 
 **Experiment 2:**
@@ -82,7 +82,7 @@ Samples labeled as healthy were most prevalent, while Bipolar II samples were sc
 
 **Additional Statistical Analysis:**
 
-Various statistical measures, including mean, number of zeros, skewness, and standard deviation, provided insights into patient characteristics and behaviors.
+Various statistical measures, including mean, number of zeros, skewness, and standard deviation, provided insights into patient characteristics and behaviours.
 Patients with depression appeared to be more active than average, and MADRS scores generally decreased significantly over time, possibly indicating improved treatments.
 
 **Future Directions:**
@@ -100,12 +100,12 @@ Two experiments were conducted, one with unprocessed data and another with UMAP 
 **Results Summary:**
 
 Experiment 1 showed moderate performance due to class imbalance issues and incomplete model training.
-Experiment 2, utilizing UMAP and neural networks, achieved high accuracy and F1-score, demonstrating the effectiveness of the approach.
+Experiment 2, utilising UMAP and neural networks, achieved high accuracy and F1-score, demonstrating the effectiveness of the approach.
 Comparison with other studies highlighted the superiority of the proposed method in depression classification.
 
 **Limitations:**
 
-The study's sample size was relatively small, potentially limiting the generalizability of the findings.
+The study's sample size was relatively small, potentially limiting the generalisability of the findings.
 Class distribution imbalance, particularly in the Bipolar II class, could bias the results and affect the model's performance.
 Incomplete model training in Experiment 1 may have impacted performance evaluation.
 Lack of comparison with gold-standard diagnostic methods for depression limits the validation of ML and UMAP methods.
@@ -122,7 +122,7 @@ External validation and long-term monitoring could provide a more nuanced unders
 
 ## Conclusion
 The paper presents a novel approach to depression detection and classification using a combination of unsupervised machine learning dimensionality reduction, neural networks, and uniform manifold approximation and projection (UMAP). Two experiments were conducted to evaluate the proposed method, one with dimensional reduction and one without, demonstrating its effectiveness in distinguishing between healthy and ill instances as well as different stages of depression.
-The results of the experiments showed remarkable performance, with the model achieving high accuracy, F1-score, and Cohen Kappa score. Despite completing the model training process in fewer epochs than anticipated, thanks to the Adam optimizer, there were challenges with the validation score not performing as well as the training score, particularly in the first experiment.
+The results of the experiments showed remarkable performance, with the model achieving high accuracy, F1-score, and Cohen Kappa score. Despite completing the model training process in fewer epochs than anticipated, thanks to the Adam optimiser, there were challenges with the validation score not performing as well as the training score, particularly in the first experiment.
 In the second experiment, rapid convergence to a high accuracy of 0.991 was observed, which aligned with the outcomes of UMAP dimensionality reduction. Additionally, various machine learning classification techniques were employed, with the highest score achieved among these algorithms being 0.727. However, the limited number of samples in the Bipolar II class, especially in the testing set, adversely affected the classification performance.
 The study suggests several future research directions, including exploring additional dimensionality reduction techniques, integrating multimodal data sources, conducting longitudinal studies, validating the proposed method in clinical settings, and focusing on the interpretability and explainability of depression classification models. These avenues of research have the potential to advance the diagnosis, treatment, and support for individuals with depression.
 
