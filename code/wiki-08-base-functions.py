@@ -158,19 +158,30 @@ def preprocess_full_days(df, save_to_csv=False, output_csv_path=None, print_info
 
 ## extract days per scores
 
-def extract_days_per_scores(df, scores_csv_path='..\data\depresjon\scores.csv', save_to_csv=False, output_csv_path=None):
+import warnings
+
+# ignore all warnings
+#warnings.filterwarnings('ignore')
+
+warnings.filterwarnings('ignore', category=DeprecationWarning)
+
+def extract_days_per_scores(df, scores_csv_path='..\\data\\depresjon\\scores.csv', save_to_csv=False, output_csv_path=None, min_days=None, exact_days=None):
     """
     Extract the number of days per ID from the 'scores' data.
 
     Args:
         df (pd.DataFrame): df containing the 'id' column.
-        scores_csv_path (str, optional): path to the 'scores' CSV file. Defaults to '..\data\depresjon\scores.csv'.
+        scores_csv_path (str, optional): path to the 'scores' CSV file. Defaults to '..\\data\\depresjon\\scores.csv'.
         save_to_csv (bool, optional): save the updated df to a CSV file? Defaults to True.
         output_csv_path (str, optional): csv filepath. Required if save_to_csv is True.
-        
+        min_days (int, optional): drop rows where 'days' column from 'scores.csv' is less than this value.
+        exact_days (int, optional): keep only the specified number of days per ID.
 
     Returns:
         pd.DataFrame: df with the specified number of days per ID based on 'scores'.
+
+    Raises:
+        ValueError: If each ID does not have at least min_days or exact_days (if specified).
     """
     # scores from the CSV file
     scores_df = pd.read_csv(scores_csv_path)
@@ -178,15 +189,32 @@ def extract_days_per_scores(df, scores_csv_path='..\data\depresjon\scores.csv', 
     # merge scores with the df based on the 'id' column
     merged_df = pd.merge(df, scores_df, left_on='id', right_on='number', how='left')
 
-    # filter rows to keep the specified number of days
-    df_filtered = merged_df.groupby('id', group_keys=False, as_index=False, sort=False).apply(lambda group: group.head(group['days'].min() * 1440)).reset_index(drop=True)
+    # filter rows to keep the specified minimum number of days
+    if min_days is not None:
+        df_filtered = merged_df.groupby('id', group_keys=False, as_index=False, sort=False).filter(lambda group: group['days'].min() >= min_days)
+    else:
+        df_filtered = merged_df
+
+    # keep only the specified exact number of days per ID (if provided)
+    if exact_days is not None:
+        df_filtered = (
+            df_filtered.sort_values(['id', 'days'])
+            .groupby('id', group_keys=False, as_index=False)
+            .apply(lambda group: group.iloc[:exact_days * 1440])
+            .reset_index(drop=True)
+        )
+
+    # assert that each ID has at least min_days and equals exact_days (if specified)
+    if min_days is not None:
+        assert all(df_filtered.groupby('id')['days'].min() >= min_days), "Some IDs have fewer than the minimum number of days."
+    if exact_days is not None:
+        assert all(df_filtered.groupby('id')['days'].count() == exact_days * 1440), "Some IDs do not have the exact number of days."
 
     # drop cols number, days, gender, age, afftype, melanch, inpatient, edu, marriage, work, madrs1, madrs2
-    cols = ['number', 'number', 'days', 'gender', 'age', 'afftype', 'melanch', 'inpatient', 'edu', 'marriage', 'work', 'madrs1', 'madrs2']
+    cols = ['number', 'days', 'gender', 'age', 'afftype', 'melanch', 'inpatient', 'edu', 'marriage', 'work', 'madrs1', 'madrs2']
     df_filtered.drop(cols, axis=1, inplace=True)
-    
 
-    # save to CSV
+    # save to CSV if save_to_csv
     if save_to_csv:
         if output_csv_path:
             df_filtered.to_csv(output_csv_path, index=False)
