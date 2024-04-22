@@ -474,6 +474,70 @@ def plotly_24_hours(df, column, values, label=None):
     fig.show()
 
 
+def plot_singles(df, control_id, condition_id, activity='activity_norm', day_of_week=None, first_day=False):
+    # control and condition
+    control = df[df['id'] == control_id].copy()
+    condition = df[df['id'] == condition_id].copy()
+
+    #  day of week if specified
+    if day_of_week is not None:
+        control = control[control['timestamp'].dt.dayofweek == day_of_week]
+        condition = condition[condition['timestamp'].dt.dayofweek == day_of_week]
+
+    # first day if specified
+    if first_day:
+        control_date_min = control['date'].min()
+        condition_date_min = condition['date'].min()
+        control = control[control['date'] == control_date_min]
+        condition = condition[condition['date'] == condition_date_min]
+
+    #  minute column
+    control.loc[:, 'minute'] = control['timestamp'].dt.minute
+    condition.loc[:, 'minute'] = condition['timestamp'].dt.minute
+
+    # group by hour and minute, calculate mean activity
+    mean_control = control.groupby(['hour_of_day', 'minute'])[activity].mean().reset_index()
+    mean_condition = condition.groupby(['hour_of_day', 'minute'])[activity].mean().reset_index()
+
+    #  'condition' column to each dataframe
+    mean_control['condition'] = 'Control'
+    mean_condition['condition'] = 'Condition'
+
+    # combine the dataframes
+    data = pd.concat([mean_control, mean_condition])
+
+    # create 'time' column in hours
+    data['time'] = data['hour_of_day'] + data['minute'] / 60
+
+    # Plot alpha
+    plt.figure(figsize=(10,6))
+    sns.lineplot(x='time', y=activity, hue='condition', data=data, alpha=0.5)
+    plt.xlabel('Time of Day (hours)')
+    plt.ylabel('Mean ' + activity)
+    plt.title('Mean ' + activity + ' by Hour and Minute')
+    plt.show()
+
+    # Plot - scatterplot
+    plt.figure(figsize=(10,6))
+    sns.scatterplot(x='time', y=activity, hue='condition', data=data)
+    plt.xlabel('Time of Day (hours)')
+    plt.ylabel('Mean ' + activity)
+    plt.title('Mean ' + activity + ' by Hour and Minute')
+    plt.show()
+
+    # Plot - subplots
+    fig, axs = plt.subplots(2, figsize=(10,12))
+    sns.lineplot(x='time', y=activity, data=data[data['condition'] == 'Condition'], ax=axs[0])
+    axs[0].set_title('Condition: ' + condition_id)
+    axs[0].set_xlabel('Time of Day (hours)')
+    axs[0].set_ylabel('Mean ' + activity)
+    sns.lineplot(x='time', y=activity, data=data[data['condition'] == 'Control'], ax=axs[1])
+    axs[1].set_title('Control: ' + control_id)
+    plt.xlabel('Time of Day (hours)')
+    plt.ylabel('Mean ' + activity)
+    plt.suptitle('Mean ' + activity + ' by Hour and Minute')
+    plt.show()
+
 ## train / test split
     
 def split_data(df, test_size=0.2, deleteXy=True, random_state=5):
