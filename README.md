@@ -3,10 +3,11 @@
 
 ## Team members
 * Daryne Bouadi
-* Tom Grubb
-* Petter Lovehagen
-* Yacine Ramdani
 * Deniz Turan
+* Petter Lovehagen
+* Tom Grubb
+* Yacine Ramdani
+
 
 ## Project Description
 
